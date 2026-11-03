@@ -13,83 +13,96 @@ To simplify coding and scientific computing, the following Python libraries are 
 
 
 
-# Numerical Solution of the Schrödinger Equation Using Python
+# Hartree–Fock Method Using Python
 
-## Overview
+## Project Overview
 
-This project implements numerical methods in Python to solve the time-independent Schrödinger equation (TISE) and investigate quantum nuclear effects, with particular emphasis on isotope-dependent energy levels and zero-point energies.
+This project explores the numerical implementation of the Hartree–Fock (HF) method using Python to perform electronic structure calculations on simple molecular systems.
 
-## Features
+The code demonstrates the fundamental principles of quantum chemistry, including the construction of molecular orbitals, evaluation of electronic integrals, and iterative solution of the Hartree–Fock equations using the self-consistent field (SCF) procedure.
 
-- Numerical solution of the one-dimensional TISE.
-- Calculation of quantum bound-state energies.
-- Determination of zero-point energies (ZPE).
-- Investigation of isotope-dependent quantum effects.
-- Visualization of potential energy curves and wavefunctions.
+## Objectives
 
-## Numerical Methods
+- Implement the Hartree–Fock method using Python.
+- Explore the mathematical foundations of electronic structure calculations.
+- Construct molecular orbitals using Gaussian-type basis functions.
+- Investigate the electronic structure of simple molecular systems.
+- Develop practical skills in scientific programming and numerical quantum chemistry.
 
-The time-independent Schrödinger equation is given by:
+## Computational Methods
 
-$$
-\left[-\frac{\hbar^2}{2\mu}\frac{d^2}{dx^2}+V(x)\right]\psi(x)
-=E\psi(x)
-$$
+### Hartree–Fock Theory
 
-where:
+The Hartree–Fock method approximates the many-electron wavefunction using a single Slater determinant.
 
-- $\hbar$ is the reduced Planck constant.
-- $\mu$ is the reduced mass.
-- $V(x)$ is the potential energy function.
-- $\psi(x)$ is the wavefunction.
-- $E$ is the energy eigenvalue.
+The electronic structure is determined by solving the Hartree–Fock equations iteratively until self-consistency is achieved.
 
-The finite-difference method is used to discretize the Hamiltonian and calculate its eigenvalues and eigenvectors.
+### Basis Set
 
-## Requirements
+The implementation uses the minimal STO-3G basis set.
+
+Each Slater-type orbital (STO) is approximated using a linear combination of three primitive Gaussian-type orbitals (GTOs).
+
+### Self-Consistent Field (SCF) Procedure
+
+The Hartree–Fock algorithm involves:
+
+1. Constructing the overlap matrix.
+2. Calculating the one-electron integrals.
+3. Evaluating the electron–electron repulsion integrals.
+4. Constructing the Fock matrix.
+5. Solving the generalized eigenvalue problem.
+6. Updating the electronic density matrix.
+7. Repeating the procedure until convergence.
+
+## Molecular Systems
+
+The code includes parameters for the following systems:
+
+- **H₂:** Hydrogen molecule.
+- **HeH⁺:** Helium hydride cation.
+
+The molecular geometry is represented by two atoms positioned along the x-axis, with the internuclear distance defined as an adjustable parameter.
+
+## Python Libraries
 
 The project uses the following Python libraries:
 
-- [NumPy](https://numpy.org/): Numerical computations and array operations.
-- [SciPy](https://scipy.org/): Scientific computing and numerical algorithms.
-- [Matplotlib](https://matplotlib.org/): Data visualization and plotting.
+- [NumPy](https://numpy.org/): Numerical computations, matrix operations, and linear algebra.
+- [SciPy](https://scipy.org/): Scientific computing and mathematical functions.
+- [Matplotlib](https://matplotlib.org/): Visualization of numerical results and molecular orbitals.
+- [time](https://docs.python.org/3/library/time.html): Monitoring computational execution time.
+- [copy](https://docs.python.org/3/library/copy.html): Copying Python objects and data structures.
 
-## Installation
+## Code Structure
 
-Install the required dependencies:
+The implementation is organized into several sections:
 
-```bash
-pip install numpy scipy matplotlib
-```
+1. Importing Python libraries.
+2. Defining physical constants and computational parameters.
+3. Constructing Gaussian basis functions.
+4. Defining molecular geometry.
+5. Setting SCF convergence parameters.
+6. Implementing the Hartree–Fock equations.
 
-## Usage
+## Computational Parameters
 
-Run the main Python script:
+The implementation includes:
 
-```bash
-python main.py
-```
-
-Replace `main.py` with the actual entry-point filename.
-
-## Results
-
-The numerical calculations can be used to investigate:
-
-- Quantum energy levels and wavefunctions.
-- Zero-point energy differences between isotopes.
-- Effects of the potential energy function on quantum bound states.
-
-Include example figures and numerical results here.
+- STO-3G basis functions.
+- Adjustable internuclear distance.
+- Nuclear charges and atomic parameters.
+- SCF convergence threshold.
+- Atomic units for molecular calculations.
 
 ## Reproducibility
 
-To ensure reproducibility, document the input parameters, physical constants, numerical grid, boundary conditions, and convergence criteria.
+The code provides explicitly defined physical constants, molecular geometries, basis-set parameters, and convergence criteria to support reproducible calculations.
 
 ## References
 
-Add relevant publications and references describing the numerical methods and physical systems investigated.
+Add relevant references to the Hartree–Fock method, Gaussian basis sets, and numerical electronic structure calculations.
 
-## License
+## Author
 
-Specify the license governing the use and distribution of this project.
+Add your name and GitHub profile here.
