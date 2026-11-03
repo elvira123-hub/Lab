@@ -7,6 +7,6 @@ To simplify coding and scientific computing, the following Python libraries are 
 - [SciPy](https://matplotlib.org/): Data visualization, plotting graphs, and creating figures.
 
 ## Additional resources: 
-### [Python website](https://wiki.python.org/python/archive/UsefulModules.html):
+#### [Python website](https://wiki.python.org/python/archive/UsefulModules.html):
 
 - Python Useful Modules: A collection of additional Python libraries and modules.
