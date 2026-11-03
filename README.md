@@ -27,10 +27,6 @@ The Lab work explores the numerical implementation of the Hartree–Fock (HF) an
 - Develop practical skills in scientific programming and numerical quantum chemistry.
 
 ## Computational Methods
-
-
-## Computational Methods
-
 - **Hartree–Fock (HF):** Mean-field approximation.
 - **Configuration Interaction (CI):** Post-Hartree–Fock method.
 - **Second-Order Møller–Plesset Perturbation Theory (MP2):** Introduces electron correlation corrections to the Hartree–Fock energy through second-order perturbation theory.
@@ -58,14 +54,3 @@ The Hartree–Fock algorithm involves:
 The code includes parameters for the following systems:
 - **H₂:** Hydrogen molecule.
 - **HeH⁺:** Helium hydride cation.
-
-The molecular geometry is represented by two atoms positioned along the x-axis, with the internuclear distance defined as an adjustable parameter.
-
-## Python Libraries
-
-The project uses the following Python libraries:
-
-## Reproducibility
-The code provides explicitly defined physical constants, molecular geometries, basis-set parameters, and convergence criteria to support reproducible calculations.
-
-
